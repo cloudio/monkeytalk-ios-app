@@ -4,16 +4,11 @@ UISearchBarTextField "City or address (anywhere worldwide)" EnterText abcdef
 Input "City or address (anywhere worldwide)" EnterText abcdef enter
 View hotelNotFoundError VerifyWildcard ${errorText} %thinktime=3000 %timeout=6000
 WTResultsContainerView * Tap
-Button Filter Tap
-Button "Apply filters" Tap
-Button Back Tap
-Table "Empty list" SelectIndex 1
-Table "Empty list" SelectIndex 1
-WTGuestsButton GuestsButtonBackground Tap
-Button Cancel Tap
-Table "Empty list" SelectIndex 1 2
-Button "Book now fr. ฿3499" Tap
 UISearchBarTextField "City or address (anywhere worldwide)" Tap
-Button Cancel Tap
-
-"Book now fr. $" not found in "Book now fr. $764"
+Input "City or address (anywhere worldwide)" EnterText Bangkok enter
+UIViewControllerWrapperView #2 Tap
+UIActivityIndicatorView "In progress" Tap
+Table "Empty list" SelectIndex 1 2
+Button Back Verify back
+Table "Empty list" ScrollToRow 9 1
+Table "Empty list" SelectIndex 11 2

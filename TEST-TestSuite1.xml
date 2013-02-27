@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestSuite1" tests="3" suites="0" errors="1" failures="1" skipped="0" time="35.632">
+	<testcase name="regionNotFound[Sorry*]" time="8.048" />
+	<testcase name="HappyHotelSearchMod.js[singapore $]" time="2.186">
+		<error message="sun.org.mozilla.javascript.internal.EcmaError: TypeError: Cannot find function uISearchBarTextField. (HappyHotelSearchMod.js#8) in HappyHotelSearchMod.js at line number 8" type="test.run"><![CDATA[sun.org.mozilla.javascript.internal.EcmaError: TypeError: Cannot find function uISearchBarTextField. (HappyHotelSearchMod.js#8) in HappyHotelSearchMod.js at line number 8
+  at Test HappyHotelSearchMod.js Run singapore $ %thinktime=300 %timeout=300]]></error>
+	</testcase>
+	<testcase name="HappyHotelSearch[bangkok ฿]" time="25.398">
+		<failure message="Regex 'Book now fr. \฿' not found in 'Filter'" type="test.run"><![CDATA[Regex 'Book now fr. \฿' not found in 'Filter'
+  at Button #2 VerifyRegex "Book now fr. \฿" %thinktime=3000 %retrydelay=1000 %timeout=15000 [destonationName=bangkok currencyISO=฿] (HappyHotelSearch : cmd #6)
+  at Test HappyHotelSearch Run bangkok ฿ %thinktime=300 %timeout=300 (TestSuite1.mts : cmd #6)]]></failure>
+	</testcase>
+</testsuite>

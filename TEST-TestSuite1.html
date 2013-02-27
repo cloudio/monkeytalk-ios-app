@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>TestSuite1.mts</title>
+<meta charset="UTF-8" /><style type="text/css">
+body { font-family: Cambria, Georgia, serif; font-size:14pt; margin:0; padding:20px; background-color:#eee; }
+a { color:#111; text-decoration:none; }
+a:hover { color:#666; }
+.report { list-style:none; padding:0; }
+.report li { border:2px solid #888; background-color:#ddd; padding:10px; margin:0 0 10px 0; }
+li.suite { border:none; background-color:#333; }
+li.suite ul { list-style:none; display:inline; padding: 0; }
+li.suite ul li { border:none; display:inline; padding:0 25px 0 0; background-color:#333; color:#eee; }
+#suite-name { font-size:200%; font-weight:bold; }
+li.test ul { list-style:none; border:2px solid #aaa; background-color:#eee; padding:0 6px 6px 6px; margin:8px 0 0 0; }
+li.test ul li { border:none; background-color:#eee; padding:6px 0 0 0; margin:0; }
+pre { border:1px solid #000; background-color:#fff; padding:6px; margin:0; }
+.result { float:right; font-weight:bold; }
+.err { color:#c33; }
+.ok { color:#3a3; }
+.details { display:none; }
+li.test a { padding:0 22px; }
+.closed { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADwSURBVDiNnZLNacNAEIXfExvQJec04Htgd3SJCnANPhg34VNaSNJEUkRQA8YHrcB3NeAOBBH7ckoQRol+HsxhZ3Y+voWFJPyU9/69LMv7YW+qMgxCct91XeO9N8xMNtLbZFl2MrMjSU4BKOn3YGa6mVfOucP5fL4uMRhm2/f9JYSwXQsAgAeSn2b2YmZ3awAAQABHkqcQwmYNAAAgyUg2RVHsVwHG4pZcJlmnlHZ1XbdLDQTgVdJTjLEdDuYYXCUdYozV2HDKoHLOPf61/J/BF4DnGOObhl91JqBNKe2apqkn7ADcPEHSR57nfu4yAHwDxw18G8gdKEMAAAAASUVORK5CYII=) no-repeat center left; }
+.opened { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADmSURBVDiNrZPRbcIwGITvLPfBezCB3bx0gYohUAZgg+zAEmWIigWQpcSegAUyA1KOF4MaNaGU8D/Zsr/7Ld/9lIQlZRbRrxCg9/6L5OYZWNLeOOe2AE5P8Cfn3JaS4L1/N8YcAbw9CJ+HYfjIOXcGAHLOHYDmH92bwoBXG0kyhPAN4PMP+JBSWquANxckyVpbA+jvwL21ttaP8IxsjDH2kmoAU+mSpDrGOGrwKwcppQOA3YTArpyNai5IDcnuuinryU/m3CyEEFYkc3m7TylNZmVWAACqqtoAQNu2+7k7dwUeqcXDdAGML2Mo9iPVKwAAAABJRU5ErkJggg==) no-repeat center left; }
+footer { margin:20px 0 0 0; font-size:75%; text-align:center; }
+footer a { color:#aaa }
+footer a:hover { color:#888; }
+</style>
+<script type="text/javascript">
+function tog(id) {
+    var elem = document.getElementById('test' + id);
+    elem.style.display = (elem.style.display == 'none' ? 'block' : 'none');
+    elem = document.getElementById('link' + id);
+    elem.className = (elem.className == 'opened' ? 'closed' : 'opened');
+}
+</script>
+</head>
+<body>
+
+<ul class="report" style="padding:0px 0px 0px 0px">
+
+<li class="suite">
+<ul>
+<li id="suite-name">TestSuite1.mts</li>
+<li id="suite-tests">3 tests (<span class="err">1 error</span>, <span class="err">1 failure</span>, 0 skipped)</li>
+<li>time: 35.632s</li>
+</ul>
+</li>
+
+<li class="test">
+<a id="link0" href="javascript:tog('0');" class="closed">regionNotFound[Sorry*]</a>
+<div class="result ok">OK</div>
+<ul id="test0" style="display:none;">
+<li>time: 8.048s</li>
+</ul>
+</li>
+
+<li class="test">
+<a id="link1" href="javascript:tog('1');" class="closed">HappyHotelSearchMod.js[singapore $]</a>
+<div class="result error">ERROR</div>
+<ul id="test1" style="display:none;">
+<li>time: 2.186s</li>
+<li><pre>sun.org.mozilla.javascript.internal.EcmaError: TypeError: Cannot find function uISearchBarTextField. (HappyHotelSearchMod.js#8) in HappyHotelSearchMod.js at line number 8
+  at Test HappyHotelSearchMod.js Run singapore $ %thinktime=300 %timeout=300
+</pre></li>
+</ul>
+</li>
+
+<li class="test">
+<a id="link2" href="javascript:tog('2');" class="closed">HappyHotelSearch[bangkok ฿]</a>
+<div class="result failure">FAILURE</div>
+<ul id="test2" style="display:none;">
+<li>time: 25.398s</li>
+<li><pre>Regex 'Book now fr. \฿' not found in 'Filter'
+  at Button #2 VerifyRegex "Book now fr. \฿" %thinktime=3000 %retrydelay=1000 %timeout=15000 [destonationName=bangkok currencyISO=฿] (HappyHotelSearch : cmd #6)
+  at Test HappyHotelSearch Run bangkok ฿ %thinktime=300 %timeout=300 (TestSuite1.mts : cmd #6)
+</pre></li>
+<li>screenshot:<br /><img src="screenshots/screenshot_2013-02-07_172354.png" title="screenshot_2013-02-07_172354.png" /></li>
+</ul>
+</li>
+
+</ul>
+
+<footer>
+<p><a href="http://www.gorillalogic.com/monkeytalk">MonkeyTalk by Gorilla Logic</a></p>
+</footer>
+</body>
+</html>
